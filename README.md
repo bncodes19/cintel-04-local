@@ -47,3 +47,12 @@ git add .
 git commit -m "commit message"
 git push origin main
 ```
+11. Build client-side app and serve the app locally
+```
+shiny static-assets remove
+shinylive export penguins docs
+```
+```
+python3 -m http.server --directory docs --bind localhost 8008
+```
+12. Open the app locally on http://localhost:8008/
